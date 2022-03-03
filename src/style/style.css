@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+html {
+    background: linear-gradient(-90deg, rgba(3, 61, 45, 255) 0%, rgba(40, 35, 68, 255) 100%);
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sekcja ogólna */
+
+.sections__item {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Koniec ogólnej sekcji */
+
+/* Sekcja tytułowa */
+
+.header {
+    padding: 10px 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+}
+
+.header__logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header__logo img {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    width: 100%;
+}
+
+.title__image {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.title__name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+.title__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.title__buttons__item {
+    margin-right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    background: rgb(150, 73, 196);
+}
+
+.title__buttons__item:hover {
+    background: rgb(187, 111, 231);
+    color: white;
+}
+
+/* Koniec sekcji tytułowej */
+
+/* Początek sekcji premium */
+
+.premium {
+    display: flex;
+    align-items: center;
+}
+
+.premium__list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: -30px;
+}
+
+.premium__item {
+    background: #8951b8;
+    z-index: 1;
+    width: 100%;
+    max-width: 235px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.premium__item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    top: 3px;
+    left: 3px;
+    border-radius: 18px;
+    border: 4px solid #7034a1;
+    z-index: -1;
+}
+
+.premium__img {
+    width: 75%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.premium__name {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+.premium__coint {
+    font-size: .95rem;
+    font-weight: 400;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.premium__descriptions {
+    list-style: '- ';
+}
+
+.premium__button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background: #5926d1;
+    color: white;
+}
+
+.premium__button:hover {
+    background: #6f379c;
+}
+
+/* Koniec sekcji premium */
+
+/* Sekcja opisowa */
+
+.descriptions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 850px;
+    flex-wrap: wrap;
+}
+
+.description--right {
+    flex-direction: row-reverse;
+}
+
+.description--left {
+    flex-direction: row;
+}
+
+.decription__image {
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    margin: 20px 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description__img {
+    width: 100%;
+    transition: all .3s;
+}
+
+.description__img:hover {
+    transform: scale(1.3)
+}
+
+.description__text {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 0;
+    text-align: justify;
+    font-size: 19px;
+    color: #fff;
+    margin: 0 3px;
+}
+
+/* Koniec sekcji opisowej */
+
+/* Strzałka nawigacyjna */
+
+.arrow {
+    position: fixed;
+    bottom: 30px;
+    left: calc(50% - 20px);
+    width: 50px;
+    height: 50px;
+    background: none;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: all .3s;
+}
+
+.arrow:hover {
+    background: #fff;
+    color: #5926d1;
+    cursor: pointer;
+}
+
+/* Koniec strzałki nawigacyjnej */
